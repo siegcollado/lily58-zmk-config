@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: lily58_rotated}
 layers:
   default:
-  - ESC
+  - {t: ESC, s: '`'}
   - '1'
   - '2'
   - '3'
@@ -54,7 +54,7 @@ layers:
   - LALT
   - LGUI
   - lower
-  - {t: SPACE, h: LCTRL}
+  - SPACE
   - {t: RET, h: Ctl+Alt+ LGUI}
   - raise
   - media
