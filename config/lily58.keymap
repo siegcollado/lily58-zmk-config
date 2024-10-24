@@ -9,9 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEF 0
-#define LOWER 1
-#define RAISE 2
-#define MEDIA 3
+#define LEFT_MOD 1
+#define RIGHT_MOD 2
+#define LOWER 3
+#define RAISE 4
+#define MEDIA 5
 
 #define HYP LS(LC(LA(LGUI)))
 #define MEH LC(LA(LGUI))
@@ -47,11 +49,35 @@
 
         default_layer {
             bindings = <
-&gresc    &kp N1 &kp N2 &kp N3    &kp N4   &kp N5                           &kp N6    &kp N7    &kp N8    &kp N9  &kp N0   &kp BSPC
-&kp TAB   &kp Q  &kp W  &kp E     &kp R    &kp T                            &kp Y     &kp U     &kp I     &kp O   &kp P    &kp BSLH
-&kp LCTRL &kp A  &kp S  &kp D     &kp F    &kp G                            &kp H     &kp J     &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X  &kp C     &kp V    &kp B     &kp LBKT   &kp RBKT    &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &rshift_caps
-                        &kp LALT  &kp LGUI &mo LOWER &kp SPACE  &mt MEH RET &mo RAISE &mo MEDIA &kp RGUI
+&gresc    &kp N1 &kp N2 &kp N3    &kp N4     &kp N5                              &kp N6        &kp N7    &kp N8    &kp N9  &kp N0   &kp BSPC
+&kp TAB   &kp Q  &kp W  &kp E     &kp R      &kp T                               &kp Y         &kp U     &kp I     &kp O   &kp P    &kp BSLH
+&kp LCTRL &kp A  &kp S  &kp D     &kp F      &kp G                               &kp H         &kp J     &kp K     &kp L   &kp SEMI &kp SQT
+&kp LSHFT &kp Z  &kp X  &kp C     &kp V      &kp B        &kp LBKT   &kp RBKT    &kp N         &kp M     &kp COMMA &kp DOT &kp FSLH &rshift_caps
+                        &kp LALT  &mo  LOWER &mo LEFT_MOD &kp SPACE  &mt MEH RET &mo RIGHT_MOD &mo RAISE &mo MEDIA
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+        
+        left_mod {
+            bindings = <
+&trans     &trans       &trans       &trans       &trans     &trans                       &trans    &trans    &trans   &trans    &trans    &trans
+&trans     &trans       &trans       &trans       &trans     &trans                       &trans    &trans    &trans   &trans    &trans    &trans
+&trans     &kp LSHFT    &kp LCTRL    &kp LALT     &kp LGUI   &trans                       &trans    &trans    &trans   &trans    &trans    &trans
+&trans     &trans       &trans       &trans       &trans     &trans    &trans   &trans    &trans    &trans    &trans   &trans    &trans    &trans
+                                     &trans       &trans     &trans    &trans   &trans    &trans    &trans    &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        right_mod {
+            bindings = <
+&trans     &trans       &trans       &trans       &trans       &trans                       &trans    &trans    &trans   &trans    &trans    &trans
+&trans     &trans       &trans       &trans       &trans       &trans                       &trans    &trans    &trans   &trans    &trans    &trans
+&trans     &trans       &trans       &trans       &trans       &trans                       &kp RGUI  &kp RALT  &kp RCTL &kp RSHFT &trans    &trans
+&trans     &trans       &trans       &trans       &trans       &trans    &trans   &trans    &trans    &trans    &trans   &trans    &trans    &trans
+                                     &trans       &trans       &trans    &trans   &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
