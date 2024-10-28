@@ -53,10 +53,10 @@ layers:
   - '&rshift_caps'
   - LALT
   - LGUI
-  - lower
+  - raise
   - SPACE
   - {t: RET, h: Ctl+Alt+ LGUI}
-  - raise
+  - lower
   - RGUI
   - RALT
   lower:
@@ -73,16 +73,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ESC, s: '`'}
+  - <
   - '['
   - '{'
   - (
   - '~'
-  - ^
+  - '`'
   - )
   - '}'
   - ']'
-  - '`'
+  - '>'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '-'
@@ -104,7 +104,7 @@ layers:
   - '%'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
+  - ^
   - _
   - '&'
   - '|'
@@ -112,10 +112,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   raise:
@@ -171,10 +171,10 @@ layers:
   - VOL DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   fn:
