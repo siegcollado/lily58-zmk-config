@@ -11,7 +11,7 @@
 #define DEF 0
 #define LOWER 1
 #define RAISE 2
-#define MEDIA 3
+#define FN 3
 
 #define HYP LS(LC(LA(LGUI)))
 #define MEH LC(LA(LGUI))
@@ -42,6 +42,14 @@
       };
     };
 
+    conditional_layers {
+      compatible = "zmk,conditional-layers";
+      tri_layer { 
+        if-layers = <LOWER RAISE>;
+        then-layer = <FN>;
+      };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -51,7 +59,7 @@
 &kp TAB   &kp Q  &kp W  &kp E     &kp R    &kp T                            &kp Y     &kp U     &kp I     &kp O   &kp P    &kp BSLH
 &kp LCTRL &kp A  &kp S  &kp D     &kp F    &kp G                            &kp H     &kp J     &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C     &kp V    &kp B     &kp LBKT   &kp RBKT    &kp N     &kp M     &kp COMMA &kp DOT &kp FSLH &rshift_caps
-                        &kp LALT  &kp LGUI &mo LOWER &kp SPACE  &mt MEH RET &mo RAISE &mo MEDIA &kp RGUI
+                        &kp LALT  &kp LGUI &mo RAISE &kp SPACE  &mt MEH RET &mo LOWER &kp RGUI  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -59,11 +67,11 @@
 
         lower_layer {
             bindings = <
-&trans     &trans       &trans       &trans       &trans       &trans                       &trans    &trans    &trans   &trans    &trans    &trans
-&trans     &kp F1       &kp F2       &kp F3       &kp F4       &trans                       &trans    &trans    &trans   &trans    &trans    &trans
-&trans     &kp F5       &kp F6       &kp F7       &kp F8       &trans                       &kp LARW  &kp DARW  &kp UARW &kp RARW  &trans    &trans
-&trans     &kp F9       &kp F10      &kp F11      &kp F12      &trans    &trans   &trans    &trans    &trans    &trans   &trans    &trans    &trans
-                                     &trans       &trans       &trans    &trans   &trans    &trans    &trans    &trans
+&trans     &trans       &trans       &trans       &trans       &trans                          &trans    &trans    &trans    &trans    &trans    &trans
+&trans     &kp LT       &kp LBKT     &kp LBRC     &kp LPAR     &kp TILDE                       &kp GRAVE &kp RPAR  &kp RBRC  &kp RBKT  &kp GT    &trans
+&trans     &kp MINUS    &kp EQUAL    &kp PLUS     &kp STAR     &kp FSLH                        &kp POUND &sk RGUI  &sk RALT  &sk RCTRL &sk RSHFT &trans
+&trans     &kp EXCL     &kp AT       &kp POUND    &kp DLLR     &kp PRCNT    &trans   &trans    &kp CARET &kp UNDER &kp AMPS  &kp PIPE  &kp QMARK &trans
+                                     &trans       &trans       &trans       &trans   &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -71,23 +79,23 @@
 
         raise_layer {
             bindings = <
-&trans    &trans    &trans    &trans    &trans   &trans                        &trans      &trans    &trans    &trans   &trans    &trans
-&kp TILDE &kp MINUS &kp EQUAL &kp PLUS  &kp STAR &kp FSLH                      &kp PIPE    &kp UNDER &kp LBRC  &kp RBRC &kp BSLH  &trans
-&trans    &kp GRAVE &kp SQT   &kp DQT   &kp DOT  &kp COMMA                     &kp LT      &kp GT    &kp LPAR  &kp RPAR &kp COLON &kp QMARK
-&trans    &kp EXCL  &kp AT    &kp POUND &kp DLLR &kp PRCNT  &trans    &trans   &kp CARET   &kp AMPS  &kp LBKT  &kp RBKT &kp SEMI  &trans
-                              &trans    &trans   &trans     &trans    &trans   &trans      &trans    &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &none     &none     &none    &none     &none         &none 
+&none      &none        &none        &none        &none        &none                        &none     &none     &none    &none     &none         &none 
+&none      &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI     &none                        &kp LARW  &kp DARW  &kp UARW &kp RARW  &kp C_BRI_UP  &kp C_VOL_UP
+&none      &none        &none        &kp C_PREV   &kp C_NEXT   &kp C_PP  &none    &none     &none     &none     &none    &none     &kp C_BRI_DN  &kp C_VOL_DN
+                                     &trans       &trans       &trans    &trans   &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        media_layer {
+        fn_layer {
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                &trans     &trans   &trans     &trans      &trans        &trans
-&trans     &trans       &trans       &trans       &trans       &trans                      &trans     &trans   &trans     &trans      &trans        &trans
-&trans     &trans       &trans       &trans       &trans       &trans                      &kp C_PREV &kp C_PP &kp C_STOP &kp C_NEXT  &kp C_BRI_UP  &kp C_VOL_UP
-&trans     &trans       &trans       &trans       &trans       &trans       &trans &trans  &trans     &trans   &trans     &trans      &kp C_BRI_DN  &kp C_VOL_DN
-                                     &trans       &trans       &trans       &trans &trans  &trans     &trans   &trans
+&trans     &trans       &trans       &trans       &trans       &trans                      &trans    &trans    &trans   &trans    &trans    &trans
+&none      &kp F1       &kp F2       &kp F3       &kp F4       &none                       &none     &kp F5    &kp F6   &kp F7    &kp F8    &none 
+&none      &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI     &none                       &none     &sk RGUI  &sk RALT &sk RCTRL &sk RSHFT &none 
+&none      &kp F9       &kp F10      &kp F11      &kp F12      &none     &none   &none     &none     &none     &none    &none     &none     &none 
+                                     &trans       &trans       &trans    &trans  &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

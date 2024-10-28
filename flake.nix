@@ -68,12 +68,12 @@
                   config="$keymap_dir/$name.yaml"
                   echo "found keymap config $config"
                   
-                  [ -f "$img_out/$name.svg" ] && rm "$img_out/$name.svg"
+                  [ -f "$img_out/$name.svg" ] && rm -f "$img_out/$name.svg"
                   keymap -c "$keymap_dir/keymap_drawer.yaml" draw "$config" > "$img_out/$name.svg"
 
                   layers=$(${yq} '.layers | keys | .[]' "$config")
                   for layer in $layers; do
-                    [ -f "$img_out/$name_$layer.svg" ] && rm "$img_out/$name_$layer.svg"
+                    [ -f "$img_out/$name_$layer.svg" ] && rm -f "$img_out/$name_$layer.svg"
                     keymap -c "$keymap_dir/keymap_drawer.yaml" draw "$config" --select-layers "$layer" > "$img_out/$name_$layer.svg"
                   done
                 done
