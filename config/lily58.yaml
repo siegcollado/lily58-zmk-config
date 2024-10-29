@@ -138,8 +138,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - END
+  - HOME
   - ''
   - ''
   - ''
@@ -164,8 +164,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - PGDN
+  - PGUP
   - ''
   - BRI DN
   - VOL DN
@@ -178,18 +178,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   fn:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: ESC, s: '`'}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
   - ''
   - F1
   - F2

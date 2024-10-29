@@ -79,10 +79,10 @@
 
         raise_layer {
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &none     &none     &none    &none     &none         &none 
-&none      &none        &none        &none        &none        &none                        &none     &none     &none    &none     &none         &none 
-&none      &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI     &none                        &kp LARW  &kp DARW  &kp UARW &kp RARW  &kp C_BRI_UP  &kp C_VOL_UP
-&none      &none        &none        &kp C_PREV   &kp C_NEXT   &kp C_PP  &none    &none     &none     &none     &none    &none     &kp C_BRI_DN  &kp C_VOL_DN
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &none     &none     &none     &none     &none         &none 
+&none      &none        &none        &none        &none        &none                        &none     &kp END   &kp HOME  &none     &none         &none 
+&none      &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI     &none                        &kp LARW  &kp DARW  &kp UARW  &kp RARW  &kp C_BRI_UP  &kp C_VOL_UP
+&none      &none        &none        &kp C_PREV   &kp C_NEXT   &kp C_PP  &none    &none     &none     &kp PGDN  &kp PGUP  &none     &kp C_BRI_DN  &kp C_VOL_DN
                                      &trans       &trans       &trans    &trans   &trans    &trans    &trans    &trans
             >;
 
@@ -91,7 +91,7 @@
 
         fn_layer {
             bindings = <
-&trans     &trans       &trans       &trans       &trans       &trans                      &trans    &trans    &trans   &trans    &trans    &trans
+&gresc     &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                      &kp N6    &kp N7    &kp N8   &kp N9    &kp N0    &none
 &none      &kp F1       &kp F2       &kp F3       &kp F4       &none                       &none     &kp F5    &kp F6   &kp F7    &kp F8    &none 
 &none      &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI     &none                       &none     &sk RGUI  &sk RALT &sk RCTRL &sk RSHFT &none 
 &none      &kp F9       &kp F10      &kp F11      &kp F12      &none     &none   &none     &none     &none     &none    &none     &none     &none 
