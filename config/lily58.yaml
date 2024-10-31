@@ -1,6 +1,6 @@
 layout: {qmk_keyboard: lily58_rotated}
 layers:
-  qwerty:
+  QWERTY:
   - {t: ESC, s: '`'}
   - '1'
   - '2'
@@ -53,13 +53,13 @@ layers:
   - '&rshift_caps'
   - LALT
   - LGUI
-  - num
+  - NAV
   - SPACE
   - {t: RET, h: Ctl+Alt+ LGUI}
-  - sym
+  - SYM
   - RGUI
   - RALT
-  sym:
+  SYM:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -118,7 +118,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  num:
+  NAV:
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -177,7 +177,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  fn:
+  FN:
   - {t: ESC, s: '`'}
   - '1'
   - '2'

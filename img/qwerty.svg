@@ -116,8 +116,8 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 </style>
-<g transform="translate(30, 0)" class="layer-qwerty">
-<text x="0" y="28" class="label" id="qwerty">qwerty:</text>
+<g transform="translate(30, 0)" class="layer-QWERTY">
+<text x="0" y="28" class="label" id="QWERTY">QWERTY:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 56)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -330,7 +330,7 @@ path.combo {
 </g>
 <g transform="translate(280, 266)" class="key keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">num</text>
+<text x="0" y="0" class="key tap">NAV</text>
 </g>
 <g transform="translate(350, 266) rotate(30.0)" class="key keypos-53">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
@@ -343,7 +343,7 @@ path.combo {
 </g>
 <g transform="translate(644, 266)" class="key keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">sym</text>
+<text x="0" y="0" class="key tap">SYM</text>
 </g>
 <g transform="translate(700, 260)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
