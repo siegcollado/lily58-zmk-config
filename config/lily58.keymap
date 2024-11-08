@@ -70,8 +70,8 @@
             display-name = "SYM";
             bindings = <
 &trans     &trans       &trans       &trans       &trans       &trans                          &trans    &trans    &trans    &trans    &trans    &trans
-&trans     &kp LT       &kp LBKT     &kp LBRC     &kp LPAR     &kp TILDE                       &kp GRAVE &kp RPAR  &kp RBRC  &kp RBKT  &kp GT    &trans
-&trans     &kp MINUS    &kp EQUAL    &kp PLUS     &kp STAR     &kp FSLH                        &kp POUND &sk RGUI  &sk RALT  &sk RCTRL &sk RSHFT &trans
+&trans     &kp LT       &kp LBKT     &kp LBRC     &kp LPAR     &kp TILDE                       &kp GRAVE &kp RPAR  &kp RBRC  &kp RBKT  &kp GT    &kp PIPE
+&trans     &kp MINUS    &kp EQUAL    &kp PLUS     &kp STAR     &kp FSLH                        &kp POUND &sk RGUI  &sk RALT  &sk RCTRL &sk RSHFT &kp DQT
 &trans     &kp EXCL     &kp AT       &kp POUND    &kp DLLR     &kp PRCNT    &trans   &trans    &kp CARET &kp UNDER &kp AMPS  &kp PIPE  &kp QMARK &trans
                                      &trans       &trans       &trans       &trans   &trans    &trans    &trans    &trans
             >;
@@ -82,7 +82,7 @@
         raise_layer {
             display-name = "NAV";
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &none     &none     &none     &none     &none         &none 
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                 &none     &none     &none     &none     &none         &kp DEL
 &none      &none        &none        &none        &none        &none                        &none     &kp END   &kp HOME  &none     &none         &none 
 &none      &sk LSHFT    &sk LCTRL    &sk LALT     &sk LGUI     &none                        &kp LARW  &kp DARW  &kp UARW  &kp RARW  &kp C_BRI_UP  &kp C_VOL_UP
 &none      &none        &none        &kp C_PREV   &kp C_NEXT   &kp C_PP  &none    &none     &none     &kp PGDN  &kp PGUP  &none     &kp C_BRI_DN  &kp C_VOL_DN

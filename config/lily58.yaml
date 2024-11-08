@@ -83,7 +83,7 @@ layers:
   - '}'
   - ']'
   - '>'
-  - {t: ▽, type: trans}
+  - '|'
   - {t: ▽, type: trans}
   - '-'
   - '='
@@ -95,7 +95,7 @@ layers:
   - {t: RALT, h: sticky}
   - {t: RCTRL, h: sticky}
   - {t: RSHFT, h: sticky}
-  - {t: ▽, type: trans}
+  - '"'
   - {t: ▽, type: trans}
   - '!'
   - '@'
@@ -130,7 +130,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - DEL
   - ''
   - ''
   - ''
